@@ -9,7 +9,7 @@ export default function HomeHeader() {
             <Link className="hover:underline" href="https://mail.google.com">Kmail</Link>
             <Link className="hover:underline" href="https://images.google.com">Images</Link>
             <LuLayoutGrid className="text-3xl bg-transparent hover:bg-gray-100 rounded-lg p-1"/>
-            <button className="py-2 px-6 bg-blue-500 rounded-md hover:drop-shadow-md transition-transform duration-200 text-white">Sign in</button>
+            <button className="py-2 px-6 bg-blue-300 rounded-md hover:drop-shadow-md transition-transform duration-200">Sign in</button>
 
         </div>
     </header>

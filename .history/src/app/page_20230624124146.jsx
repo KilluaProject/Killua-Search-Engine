@@ -5,15 +5,15 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
+    <main className="container flex flex-col justify-center">
 
       <HomeHeader/>
 
-      <div className="flex justify-center flex-col items-center mt-32 gap-4">
+      <div className="flex flex-col item-center justify-center mt-32">
 
-        <Image width={300} height={100} src={"/logo.png"}/>
+      <Image width={300} height={100} src={"/logo.png"}/>
 
-        <HomeSearch/>
+      <HomeSearch/>
 
       </div>
     </main>

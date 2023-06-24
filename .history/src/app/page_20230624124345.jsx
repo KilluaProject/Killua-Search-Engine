@@ -9,7 +9,7 @@ export default function Home() {
 
       <HomeHeader/>
 
-      <div className="flex justify-center flex-col items-center mt-32 gap-4">
+      <div className="flex justify-center flex-col items-center mt-32">
 
         <Image width={300} height={100} src={"/logo.png"}/>
 
