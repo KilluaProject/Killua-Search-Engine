@@ -47,11 +47,13 @@ export default function HomeSearch() {
 
             <div className='gap-2 flex flex-col justify-center items-center sm:flex-row '>
               <button onClick={handleSubmit} className="btn">Search</button>
-              <button disabled={randomSearchLoading}
-              onClick={randomSearch} className="btn flex items-center justify-center disabled:opacity-80">
+              <button
+              onClick={randomSearch} className='btn'>
                 {randomSearchLoading ? (
-                  <img className="h-5 text-center" src="spinner.svg" alt="Loading..." />) : ( "Im Feeling not luck ")}
-                </button>
+                  <img src="" alt="" />) : ( "Im Feeling not luck ")}
+                
+                
+                Im not luck today</button>
                
             </div>
     </div>

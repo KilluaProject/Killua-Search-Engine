@@ -8,24 +8,11 @@ import { useRouter } from 'next/navigation';
 export default function HomeSearch() {
   const router = useRouter();
   const [input, setInput] = useState("");
-  const [randomSearchLoading, setSearchLoading] = useState(false);
-
   function handleSubmit(e){
-    e.preventDefault();
+    e.prevenDefault();
     if(!input.trim()) return;
-    router.push(`/search/web?searchTerm=${input}`)
+    router.push(`/search/web?searchTerm${input}`)
   }
-
-  async function randomSearch() {
-    setSearchLoading(true);
-    const response = await fetch ("https://random-word-api.herokuapp.com/word")
-    .then ((res) => res.json())
-    .then ((data) => data[0]);
-    if(!response) return ;
-    router.push(`/search/web?searchTerm=${response}`);
-    setRandomSearchLoading(false)
-  }
-
 
   
   return (
@@ -36,22 +23,16 @@ export default function HomeSearch() {
 
         <form onSubmit={handleSubmit} className="p-3 border rounded-full  item-center flex items-center gap-1">
             <BsSearch className="mx-2"/>
-
             <input onChange={(e) => setInput(e.target.value)}
             value={input} type="text" placeholder="Cari apa aja yang lau mau asal gak kena INTERNET SEHAT...."
-            className='flex-grow outline-none'/>
-
+            className='flex-grow outline-none'  />
             <BsMicFill className="mx-2"/>
             
         </form>
 
             <div className='gap-2 flex flex-col justify-center items-center sm:flex-row '>
-              <button onClick={handleSubmit} className="btn">Search</button>
-              <button disabled={randomSearchLoading}
-              onClick={randomSearch} className="btn flex items-center justify-center disabled:opacity-80">
-                {randomSearchLoading ? (
-                  <img className="h-5 text-center" src="spinner.svg" alt="Loading..." />) : ( "Im Feeling not luck ")}
-                </button>
+              <button className="btn">Search</button>
+              <button className='btn'>Im not luck today</button>
                
             </div>
     </div>
