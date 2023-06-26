@@ -11,7 +11,7 @@ export default function WebSearchResults({results}) {
         </p>
         {results.items?.map((result)=>(
             <div className="max-w-lg" key={result.link}>
-                <div className="group flex flex-col gap-3">
+                <div className="group flex flex-col gap-3 pb-24">
                     <Link className="text-sm truncate" href={result.link}>
                     {result.formattedUrl}
                     </Link>

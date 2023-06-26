@@ -16,7 +16,7 @@ export default async function ImageSearchPage({searchParams}) {
   }
 
     const data = await response.json()
-    console.log('data5', data.items[5])
+    console.log('data5', data[5])
     
     const results = data.items;
 
