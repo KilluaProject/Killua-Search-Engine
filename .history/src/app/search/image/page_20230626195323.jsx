@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import React from 'react'
 import Image from 'next/image';
-import ImageSearchResults from '@/components/ImageSearchResults';
+import WebSearchResults from '@/components/WebSearchResults';
 
 export default async function ImageSearchPage({searchParams}) {
 
   const response = await fetch (
     `https://www.googleapis.com/customsearch/v1?key=${process.env.KILLUA_API}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=Image
     `
+    
   );
 
   if(!response.ok){
@@ -32,7 +33,7 @@ export default async function ImageSearchPage({searchParams}) {
   return (
     <div>
 
-      {results && <ImageSearchResults results={data}/>}
+      {results && <WebSearchResults results={data}/>}
 
     </div>
   )

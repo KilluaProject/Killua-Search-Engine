@@ -10,7 +10,7 @@ export default function WebSearchResults({results}) {
             About {results.searchInformation?.formattedTotalResults}results ({results.searchInformation?.formattedSearchTime} seconds)
         </p>
         {results.items?.map((result)=>(
-            <div className="max-w-lg mb-24" key={result.link}>
+            <div className="max-w-lg mb-24 bg-slate-500 " key={result.link}>
                 <div className="group flex flex-col gap-3">
                     <Link className="text-sm truncate" href={result.link}>
                     {result.formattedUrl}

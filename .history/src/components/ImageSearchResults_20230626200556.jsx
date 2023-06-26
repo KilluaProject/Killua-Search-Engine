@@ -1,0 +1,23 @@
+import Link from 'next/link'
+import React from 'react'
+
+export default function ImageSearchResults({results}) {
+  return (
+    <div>
+        <div className="">
+            {results.items.map((result) => (
+
+                <div key={result.link} className="">
+
+                    <div className="group">
+                        <Link href={result.image.contextLink}>
+                            <img src={result.link} alt={result.title}></img>
+                        </Link>
+                    </div>
+
+                </div>
+            ))}
+        </div>
+    </div>
+  )
+}

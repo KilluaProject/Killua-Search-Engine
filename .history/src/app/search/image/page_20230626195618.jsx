@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 import Image from 'next/image';
-import ImageSearchResults from '@/components/ImageSearchResults';
+import WebSearchResults from '@/components/WebSearchResults';
 
 export default async function ImageSearchPage({searchParams}) {
 
