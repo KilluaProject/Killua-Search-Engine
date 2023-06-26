@@ -19,7 +19,7 @@ export default function SearchHeaderOption() {
   }
 
   return (
-    <div className="flex mt-10 items-center w-full select-none border-b justify-center lg:justify-start">
+    <div className="flex mt-5 items-center w-full select-none border-b justify-center lg:justify-start">
       <div onClick={()=>selectTab("All")} 
       className={`flex items-center gap-1 border-transparent border-b-2 active:text-blue-500 cursor-pointer pb-3 px-2 ${pathname === "/search/web" && "text-blue-600 border-blue-600"}`}>
 

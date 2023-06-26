@@ -13,13 +13,12 @@ export default function SearchHeaderOption() {
   const searchTerm = searchParams.get("searchTerm")
   
   function selectTab(tab){
-
       router.push(`/search/${tab === "Images"?"image":"web"}?searchTerm=${searchTerm}`);
     
   }
 
   return (
-    <div className="flex mt-10 items-center w-full select-none border-b justify-center lg:justify-start">
+    <div className="flex mt-5 items-center">
       <div onClick={()=>selectTab("All")} 
       className={`flex items-center gap-1 border-transparent border-b-2 active:text-blue-500 cursor-pointer pb-3 px-2 ${pathname === "/search/web" && "text-blue-600 border-blue-600"}`}>
 
@@ -27,7 +26,7 @@ export default function SearchHeaderOption() {
         <h1>All</h1>
       </div>
 
-      <div onClick={()=>selectTab("Images")} 
+      <div onClick={()=>selectTab("images")} 
       className={`flex items-center gap-1 border-transparent border-b-2 active:text-blue-500 cursor-pointer pb-3 px-2 ${pathname === "/search/image" && "!text-blue-600 !border-blue-600"}`}>
 
         <AiFillPicture className="icons"/>
