@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default async function WebSearchPage({searchParams}) {
 
   const response = await fetch (
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.KILLUA_API}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.KILLUA_API}&scx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}
     `
     
   );

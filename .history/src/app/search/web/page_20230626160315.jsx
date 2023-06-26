@@ -21,9 +21,9 @@ export default async function WebSearchPage({searchParams}) {
       return (
         <div className="container mt-7 flex flex-col items-center justify-center gap-2">
           <h1 className="text-2xl">Kagak nemu gue nyari</h1>
-          <p className="text-xs">Coba dah lu ngetik yang beneran dikit gtu...</p>
+          <p className="text-xs">COBA CARI YANG LAIN, ATAU BALIK KE HOME SANA, TUH KLIK TOMBOL DI BAWAH</p>
           <Image width={600} height={200} src={"/error-image.png"}/>
-          <Link className="bg-blue-500 px-4 py-2 rounded-md text-white hover:drop-shadow-lg hover:scale-105" href="/">Homepage</Link>
+          <Link className="bg-blue-500 px-4 py-2 rounded-md text-white hover:drop-shadow-lg hover:scale-105" href="/">BALIK KE HOME</Link>
         </div>
       )
     }

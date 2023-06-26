@@ -20,10 +20,10 @@ export default async function WebSearchPage({searchParams}) {
     if(!results){
       return (
         <div className="container mt-7 flex flex-col items-center justify-center gap-2">
-          <h1 className="text-2xl">Kagak nemu gue nyari</h1>
-          <p className="text-xs">Coba dah lu ngetik yang beneran dikit gtu...</p>
-          <Image width={600} height={200} src={"/error-image.png"}/>
-          <Link className="bg-blue-500 px-4 py-2 rounded-md text-white hover:drop-shadow-lg hover:scale-105" href="/">Homepage</Link>
+          <h1>KAGAK ADA HASIL, LU NYARI APAAN SI ? NGETIK YANG BENER !!</h1>
+          <p>COBA CARI YANG LAIN, ATAU BALIK KE HOME SANA, TUH KLIK TOMBOL DI BAWAH</p>
+          <Image src={"error-image.png"}/>
+          <Link className="bg-blue-500 px-4 py-2 rounded-md text-white hover:drop-shadow-lg hover:scale-105" href="/">BALIK KE HOME</Link>
         </div>
       )
     }
