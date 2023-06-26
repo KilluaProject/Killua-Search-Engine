@@ -21,9 +21,10 @@ export default async function WebSearchPage({searchParams}) {
     if(!results){
       return (
         <div className="container mt-7 flex flex-col items-center justify-center gap-2">
-          <h1 className="text-2xl font-bold">Ups... Not Found</h1>
-          <p className="text-md">Mybe you can input another keywords or back to <Link className="text-blue-500 underline" href="/">Homepage</Link></p>
+          <h1 className="text-2xl">Kagak nemu gue nyari</h1>
+          <p className="text-2xl">Coba dah lu ngetik yang beneran dikit gtu...</p>
           <Image width={600} height={200} src={"/error-image.png"}/>
+          <Link className="bg-blue-500 px-4 py-2 rounded-md text-white hover:drop-shadow-lg hover:scale-105" href="/">Homepage</Link>
         </div>
       )
     }

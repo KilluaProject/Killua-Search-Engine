@@ -12,17 +12,21 @@ export default async function ImageSearchPage({searchParams}) {
 
   
   if(!response.ok){
-    throw new Error("Ups Not found")
+    throw new Error("Makanya jangan nyari bokep")
   }
 
     const data = await response.json()
+    console.log('data5', data.items[5])
+    
     const results = data.items;
+
     if(!results){
       return (
         <div className="container mt-7 flex flex-col items-center justify-center gap-2">
-          <h1 className="text-2xl font-bold">Ups... Not Found</h1>
-          <p className="text-md">Mybe you can input another keywords or back to <Link className="text-blue-500 underline" href="/">Homepage</Link></p>
+          <h1 className="text-3xl">Kagak nemu gue nyari</h1>
+          <p className="text-xs">Coba dah lu ngetik yang beneran dikit gtu...</p>
           <Image width={600} height={200} src={"/error-image.png"}/>
+          <Link className="bg-blue-500 px-4 py-2 rounded-md text-white hover:drop-shadow-lg hover:scale-105" href="/">Homepage</Link>
         </div>
       )
     }

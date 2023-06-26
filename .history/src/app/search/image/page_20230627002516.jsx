@@ -1,23 +1,22 @@
 import Link from 'next/link';
 import React from 'react'
 import Image from 'next/image';
-import WebSearchResults from '@/components/WebSearchResults';
+import ImageSearchResults from '@/components/ImageSearchResults';
 
-export default async function WebSearchPage({searchParams}) {
+export default async function ImageSearchPage({searchParams}) {
 
   const response = await fetch (
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.KILLUA_API}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.KILLUA_API}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=Image
     `
-    
   );
 
+  
   if(!response.ok){
     throw new Error("Makanya jangan nyari bokep")
   }
 
     const data = await response.json()
     const results = data.items;
-
     if(!results){
       return (
         <div className="container mt-7 flex flex-col items-center justify-center gap-2">
@@ -32,7 +31,7 @@ export default async function WebSearchPage({searchParams}) {
   return (
     <div>
 
-      {results && <WebSearchResults results={data}/>}
+      {results && <ImageSearchResults results={data}/>}
 
     </div>
   )
