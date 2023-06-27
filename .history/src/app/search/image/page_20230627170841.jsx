@@ -18,6 +18,8 @@ export default async function ImageSearchPage({searchParams}) {
 
     const data = await response.json()
     const results = data.items;
+    console.log(response);
+
     if(!results){
       return (
         <div className="container mt-7 flex flex-col items-center justify-center gap-2">

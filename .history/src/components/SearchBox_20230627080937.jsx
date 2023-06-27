@@ -38,7 +38,7 @@ export default function SearchBox() {
       <BsSearch
       onClick={handleSubmit}
       className="icons"/>
-      <BsMicFill className="icons hidden sm:inline-block"/>
+      <BsMicFill className="icons hidden sm:inline-flex"/>
 
     </form>
     

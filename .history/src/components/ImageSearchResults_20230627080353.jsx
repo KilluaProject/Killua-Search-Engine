@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import React from 'react'
-import PaginationButtons from './PaginationButtons'
 
 export default function ImageSearchResults({results}) {
     
@@ -28,9 +27,6 @@ export default function ImageSearchResults({results}) {
 
                 </div>
             ))}
-        </div>
-        <div>
-            <PaginationButtons/>
         </div>
     </div>
   )

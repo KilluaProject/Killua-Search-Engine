@@ -5,7 +5,7 @@ import PaginationButtons from './PaginationButtons'
 
 export default function WebSearchResults({results}) {
   return (
-    <div className="container pb-28 px-4 w-full mx-auto flex flex-col gap-3" >
+    <div className="container pb-44 px-4 w-full mx-auto flex flex-col gap-3" >
 
         <p className="text-gray-700 text-xs">
             About {results.searchInformation?.formattedTotalResults}results ({results.searchInformation?.formattedSearchTime} seconds)

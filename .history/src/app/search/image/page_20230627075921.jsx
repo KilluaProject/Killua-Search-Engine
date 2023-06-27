@@ -4,10 +4,9 @@ import Image from 'next/image';
 import ImageSearchResults from '@/components/ImageSearchResults';
 
 export default async function ImageSearchPage({searchParams}) {
-  const startIndex = searchParams.start || "1";
 
   const response = await fetch (
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.KILLUA_API}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=Image&start=${startIndex}
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.KILLUA_API}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=Image
     `
   );
 
@@ -18,6 +17,7 @@ export default async function ImageSearchPage({searchParams}) {
 
     const data = await response.json()
     const results = data.items;
+    console.log(data.items)
     if(!results){
       return (
         <div className="container mt-7 flex flex-col items-center justify-center gap-2">

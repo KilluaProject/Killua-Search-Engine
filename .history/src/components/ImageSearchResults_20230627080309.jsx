@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import React from 'react'
-import PaginationButtons from './PaginationButtons'
 
 export default function ImageSearchResults({results}) {
     
@@ -11,7 +10,7 @@ export default function ImageSearchResults({results}) {
 
                 <div key={result.link} className="mb-8">
 
-                    <div className="group flex flex-col gap-2">
+                    <div className="group gap-3">
                         <Link href={result.image.contextLink}>
                             <img className="h-60 group-hover:shadow-xl w-full object-contain transition-shadow duration-200" src={result.image.thumbnailLink}  alt={result.title}></img>
                         </Link>
@@ -28,9 +27,6 @@ export default function ImageSearchResults({results}) {
 
                 </div>
             ))}
-        </div>
-        <div>
-            <PaginationButtons/>
         </div>
     </div>
   )
